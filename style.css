@@ -1,0 +1,374 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #eef2f5;
+}
+
+/* Estados iniciales de las secciones */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animación del menú */
+.menu-toggle.rotate {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+/* Animación para tarjetas */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+nav {
+    background-color: #444;
+    padding: 1em 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00d4ff;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.dropdown-menu {
+    display: flex;
+    position: relative;
+    top: auto;
+    left: auto;
+    background-color: #444;
+    border-radius: 8px;
+    overflow: hidden;
+    width: auto;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    margin: 0;
+    padding: 10px;
+    border-bottom: none;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-menu li a:hover {
+    color: #00d4ff;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .dropdown-menu {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    .dropdown-menu.active {
+        display: flex;
+    }
+
+    .dropdown-menu li {
+        padding: 15px;
+        border-bottom: 1px solid #555;
+    }
+
+    .dropdown-menu li:last-child {
+        border-bottom: none;
+    }
+}
+
+.header {
+    text-align: center;
+    padding: 60px;
+    background: linear-gradient(45deg, #444, #666);
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.header .description {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.header .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #00d4ff;
+}
+
+section {
+    padding: 40px;
+    margin-bottom: 20px;
+}
+
+.about,
+.skills,
+.hobbies,
+.education,
+.experience,
+.contact {
+    background: white;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.skills-cards,
+.hobbies-cards,
+.education-cards,
+.experience-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.experience-cards .card {
+    width: 320px;
+}
+
+.experience-cards .card button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #444;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.experience-cards .card button:hover {
+    background-color: #00d4ff;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+    background-color: #eef6fd;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact img {
+    width: 40%;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.contact-content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.contact-content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.contact form button {
+    padding: 12px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact form button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #444;
+    color: white;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .dropdown-menu {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    .dropdown-menu.active {
+        display: flex;
+    }
+
+    .dropdown-menu li {
+        padding: 15px;
+        border-bottom: 1px solid #555;
+    }
+
+    .dropdown-menu li:last-child {
+        border-bottom: none;
+    }
+}
+
+input:invalid,
+textarea:invalid {
+    border: 2px solid red;
+}
+
+input:valid,
+textarea:valid {
+    border: 2px solid green;
+}

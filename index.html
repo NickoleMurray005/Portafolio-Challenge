@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Programador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleButton = document.querySelector(".menu-toggle");
+            const dropdownMenu = document.querySelector(".dropdown-menu");
+
+            toggleButton.addEventListener("click", function () {
+                dropdownMenu.classList.toggle("active");
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav>
+            <div><a href="#" style="color:white; text-decoration:none; font-size:1.5em;">Mi Portafolio</a></div>
+            <button class="menu-toggle">☰</button>
+            <ul class="dropdown-menu">
+                <li><a href="#about">Sobre Mí</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#education">Educación</a></li>
+                <li><a href="#experience">Experiencia</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <header class="header">
+            <div class="profile">
+                <img src="images\nickole.jpg"
+                    alt="Foto de perfil">
+                <div>
+                    <h1>Nickole Murray</h1>
+                    <p class="description">Desarrollador Web y de Software</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/NickoleMurray005" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/nickole-murray-2265891b4/" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">Instagram</a>
+                <a href="CV_NICKOLE_MURRAY.pdf" download="Curriculum-Nickole-Murray" target="_blank">Currículum</a>
+            </div>
+        </header>
+
+        <section id="about" class="about">
+            <h2>Sobre Mí</h2>
+            <p>Soy una apasionada del desarrollo web y de software con experiencia en proyectos creativos y soluciones
+                innovadoras. Me encanta aprender nuevas tecnologías y colaborar en equipos para construir herramientas
+                útiles y atractivas.</p>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <div class="skills-cards">
+                <div class="card">
+                    <img src="images\htmlfoto.jpg"
+                        alt="HTML5">
+                    <p>HTML</p>
+                </div>
+                <div class="card">
+                    <img src="images\javascriptlogo.jpg"
+                        alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="card">
+                    <img src="images\pythonlogo.jpg"
+                        alt="PHP">
+                    <p>PYTHON</p>
+                </div>
+                <div class="card">
+                    <img src="images\nodejslogo.jpg"
+                        alt="Node.js">
+                    <p>Node.js</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies" class="hobbies">
+            <h2>Hobbies</h2>
+            <div class="hobbies-cards">
+                <div class="card">
+                    <img src="images\cantar.jpg"
+                        alt="canto">
+                    <p>CANTO</p>
+                </div>
+                <div class="card">
+                    <img src="images\leer.jpg"
+                        alt="leer">
+                    <p>LECTURA</p>
+                </div>
+                <div class="card">
+                    <img src="images\escribir.jpg"
+                        alt="escribir">
+                    <p>ESCRITURA</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="education">
+            <h2>Formación Académica</h2>
+            <div class="education-cards">
+                <div class="card">
+                    <img src="images\utplogo.jpg"
+                        alt="Institución 1">
+                    <p>Técnico con Especialización en Desarrollo de Software<br>2023 - Universidad Tecnologica de Panamá</p>
+                </div>
+                <div class="card">
+                    <img src="images\iptlogo.jpg"
+                        alt="Institución 2">
+                    <p>Bachiller en Informática<br>2022 - IPT Arnulfo Arias Madrid</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <h2>Experiencia Profesional</h2>
+            <div class="experience-cards">
+                <div class="card">
+                    <img src="https://img.freepik.com/foto-gratis/lindo-gatito-sentado-junto-ventana-mirando-atardecer-naturaleza-generado-inteligencia-artificial_188544-84905.jpg"
+                        alt="Proyecto 1">
+                    <h3>Proyecto E-Commerce</h3>
+                    <p>Challenge de desarrollar una plataforma completa de comercio electrónico con funcionalidades
+                        avanzadas.</p>
+                    <button onclick="window.open('#', '_blank')">Repositorio GitHub</button>
+                    <button onclick="window.open('#', '_blank')">Ver Demo</button>
+                </div>
+                <div class="card">
+                    <img src="https://img.freepik.com/foto-gratis/lindo-gatito-sentado-junto-ventana-mirando-atardecer-naturaleza-generado-inteligencia-artificial_188544-84905.jpg"
+                        alt="Proyecto 2">
+                    <h3>Aplicación de Gestión</h3>
+                    <p>Challenge de crear una aplicación de gestión para pequeñas empresas con seguimiento de
+                        inventario.</p>
+                    <button onclick="window.open('#', '_blank')">Repositorio GitHub</button>
+                    <button onclick="window.open('#', '_blank')">Ver Demo</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <img src="images\micontacto.jpg"
+                alt="Imagen de contacto">
+            <div class="contact-content">
+                <h2>Contacto</h2>
+                <p>¿Quieres contactarme? Completa el siguiente formulario y me pondré en contacto contigo lo antes
+                    posible.</p>
+                <form>
+                    <input type="text" name="name" placeholder="Nombre" required>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <input type="text" name="subject" placeholder="Asunto" required>
+                    <textarea name="message" placeholder="Mensaje" rows="5" required></textarea>
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Nickole Murray. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
